@@ -62,6 +62,5 @@ docs/
 
 # .ignore files and development configs
 .eslintignore
-.gitattributes
 .prettierignore
 babel.config.js
