@@ -1,0 +1,58 @@
+{
+	"name": "@mypreview/unicorn-style-utils",
+	"version": "1.0.0",
+	"description": "A collection of SCSS utilities and variables.",
+	"keywords": [
+		"css",
+		"gutenberg",
+		"sass",
+		"scss",
+		"style",
+		"utils"
+	],
+	"homepage": "https://github.com/mypreview/unicorn-style-utils#readme",
+	"bugs": {
+		"url": "https://github.com/mypreview/unicorn-style-utils/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mypreview/unicorn-style-utils.git"
+	},
+	"license": "GPL-3.0-or-later",
+	"author": "MyPreview",
+	"sideEffects": false,
+	"scripts": {
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:css-fix": "wp-scripts lint-style --fix",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js-fix": "wp-scripts lint-js --fix",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"prepare": "husky install",
+		"prepublishOnly": "npm run format && npm run lint:css"
+	},
+	"lint-staged": {
+		"*.{scss,css}": [
+			"npm run lint:css"
+		],
+		"*.{js,ts,tsx}": [
+			"npm run lint:js",
+			"npm run format"
+		]
+	},
+	"dependencies": {
+		"@wordpress/base-styles": "4.4.0"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "22.5.0",
+		"husky": "7.0.4",
+		"lint-staged": "12.4.1",
+		"prettier": "npm:wp-prettier@2.6.2-beta-1"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
