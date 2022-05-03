@@ -1,0 +1,18 @@
+@use "sass:list";
+@use "sass:string";
+
+@mixin transition( $props... ) {
+	$result: ();
+
+	@for $i from 1 through length($props) {
+		$prop: list.nth($props, $i);
+		$result: list.append($result, $prop);
+		$result: list.append($result, 0.3s ease);
+
+		@if $i != length($props) {
+			$result: list.append($result, string.unquote($string: ","));
+		}
+	}
+
+	transition: $result;
+}
