@@ -1,0 +1,10 @@
+@mixin clear {
+	clear: both;
+
+	&::before,
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
