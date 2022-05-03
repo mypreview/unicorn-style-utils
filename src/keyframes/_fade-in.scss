@@ -1,0 +1,11 @@
+$prefix: unicorn;
+
+@keyframes #{$prefix}FadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

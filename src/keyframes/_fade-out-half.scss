@@ -1,0 +1,11 @@
+$prefix: unicorn;
+
+@keyframes #{$prefix}FadeOutHalf {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.5;
+	}
+}
