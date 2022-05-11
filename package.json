@@ -1,6 +1,6 @@
 {
 	"name": "@mypreview/unicorn-style-utils",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A collection of SCSS utilities and variables.",
 	"keywords": [
 		"css",
@@ -44,10 +44,10 @@
 		]
 	},
 	"dependencies": {
-		"@wordpress/base-styles": "4.4.0"
+		"@wordpress/base-styles": "^4.4.0"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "22.5.0",
+		"@wordpress/scripts": "^23.0.0",
 		"husky": "7.0.4",
 		"lint-staged": "12.4.1",
 		"prettier": "npm:wp-prettier@2.6.2-beta-1"
