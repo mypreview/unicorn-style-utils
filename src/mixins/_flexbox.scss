@@ -9,7 +9,7 @@
 			display: flex;
 		} @else if $prop == inline {
 			display: inline-flex;
-		} @else $prop == vertical {
+		} @else if $prop == vertical {
 			flex-direction: column;
 		} @else if $prop == horizontal {
 			flex-direction: row;
