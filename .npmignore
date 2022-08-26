@@ -63,6 +63,7 @@ docs/
 # .ignore files and development configs
 .editorconfig
 .eslintignore
+.eslintrc.js
 .github
 .gitattributes
 .prettierignore
@@ -71,3 +72,6 @@ docs/
 babel.config.js
 renovate.json
 package-lock.json
+
+# Test files
+build/*/test/
