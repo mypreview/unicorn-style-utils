@@ -1,6 +1,12 @@
 @use "sass:list";
 @use "sass:string";
 
+/**
+ * Transition mixin
+ *
+ * Example @include transition(opacity)
+ * Result  transition: opacity .3s ease;
+ */
 @mixin transition( $props... ) {
 	$result: ();
 
