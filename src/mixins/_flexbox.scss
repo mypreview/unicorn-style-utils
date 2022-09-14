@@ -1,18 +1,26 @@
 @use "sass:list";
 
+/**
+ * Flexbox mixin
+ *
+ * Example @include box(vertical, wrap)
+ * Result  display: flex;
+ *         flex-direction: column;
+ */
 @mixin box( $props...  ) {
+
+	@if list.index($props, inline) {
+		display: inline-flex;
+	} @else {
+		display: flex;
+	}
 
 	@for $i from 1 through length($props) {
 		$prop: list.nth($props, $i);
 
-		@if list.index($props, inline) {
-			display: inline-flex;
-		} @else {
-			display: flex;
-		}
 
 		@if list.index($props, vertical) {
-			flex-direction: column;
+
 			@if $prop == top {
 				justify-content: flex-start;
 			} @else if $prop == bottom {
@@ -27,6 +35,7 @@
 				align-items: center;
 			}
 		} @else {
+
 			@if $prop == middle {
 				align-items: center;
 			} @else if $prop == left {
@@ -42,7 +51,9 @@
 			}
 		}
 
-		@if $prop == horizontal {
+		@if $prop == vertical {
+			flex-direction: column;
+		} @else if $prop == horizontal {
 			flex-direction: row;
 		} @else if $prop == wrap {
 			flex-wrap: wrap;
