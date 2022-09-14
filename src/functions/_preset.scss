@@ -1,0 +1,9 @@
+/**
+ * WordPress Preset function
+ *
+ * Example color: preset(color, primary);
+ * Result  color: var(--wp--preset--color--primary);
+ */
+@mixin preset($category, $slug) {
+	@return var(--wp--preset--#{category}--#{slug});
+}
