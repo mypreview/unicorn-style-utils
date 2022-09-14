@@ -1,4 +1,10 @@
-// Example @include hidden( disappear )
+/**
+ * Hidden mixin
+ *
+ * Example @include hidden( disappear );
+ * Result  display: none;
+           visibility: hidden;
+ */
 @mixin hidden( $state: disappear ) {
 	@if $state == disappear {
 		display: none;
