@@ -1,0 +1,17 @@
+/**
+ * Hover overlay effect mixin
+ *
+ * Example @include hover-overlay(rgba(0, 0, 0, 0.1), 100%);
+ */
+@mixin hover-overlay($color: currentcolor, $size: 1px) {
+	transition: background-size 0.35s ease 0s, color 0.35s ease 0.35s;
+	background-image: linear-gradient($color, $color);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	background-size: 0% $size;
+
+	&:hover {
+		background-position: 0 100%;
+		background-size: 100% $size;
+	}
+}
