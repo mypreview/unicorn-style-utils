@@ -1,0 +1,9 @@
+@for $i from 1 through 10 {
+	@each $area in top, bottom {
+		@each $space in margin, padding {
+			.#{$space}-#{$area}-#{$i * 10} {
+				#{$space}-#{$area}: #{$i * 10px};
+			}
+		}
+	}
+}
