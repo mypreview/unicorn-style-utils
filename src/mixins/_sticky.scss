@@ -1,0 +1,26 @@
+/**
+ * Sticky mixin
+ *
+ * Example @include sticky( bottom, 100%, true );
+ * Result  position: sticky;
+           width: 100%;
+           z-index: 999;
+           bottom: 0;
+ */
+
+@mixin sticky( $position: top, $width: 100%, $wrap: false ) {
+	width: $width;
+	z-index: 999;
+
+	@if $wrap == false {
+		position: fixed;
+	} @else {
+		position: sticky;
+	}
+
+	@if $position == top {
+		top: 0;
+	} @else if $position == bottom {
+		bottom: 0;
+	}
+}
