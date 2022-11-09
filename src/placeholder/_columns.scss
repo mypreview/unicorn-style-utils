@@ -1,0 +1,27 @@
+// Requried
+// base/breakpoints
+
+.columns {
+	display: grid;
+	gap: var(columns-gap, 30px);
+
+	@include from-tablet {
+		@for $i from 2 through 5 {
+			&--#{$i} {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+
+	@include tablet {
+		@for $i from 1 through 3 {
+			&--tablet-#{$i} {
+				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+	}
+
+	&--align-center {
+		align-items: center;
+	}
+}
