@@ -1,0 +1,20 @@
+// Requried
+// base/breakpoints
+
+@each $align in center, left, right {
+	.text-#{$align} {
+		text-align: $align;
+	}
+
+	@include until-tablet {
+		.tablet-text-#{$align} {
+			text-align: $align;
+		}
+	}
+
+	@include mobile {
+		.mobile-text-#{$align} {
+			text-align: $align;
+		}
+	}
+}
