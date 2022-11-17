@@ -3,7 +3,7 @@
 
 .columns {
 	display: grid;
-	gap: var(columns-gap, 30px);
+	gap: var(--columns-gap, 30px);
 
 	@include from-tablet {
 		@for $i from 2 through 5 {
