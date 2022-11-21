@@ -1,0 +1,21 @@
+$prefix: unicorn;
+
+/**
+ * Shake keyframes
+ *
+ * Example animation: unicornshake .5s infinite ease-in-out;
+ */
+@keyframes #{$prefix}shake {
+    0% {
+        transform: rotate(5deg) translateY(-2px);
+    }
+    35% {
+        transform: rotate(0deg);
+    }
+    63% {
+        transform: rotate(-5deg) translateY(-2px);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
