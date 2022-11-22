@@ -5,7 +5,7 @@ $prefix: unicorn;
  *
  * Example animation: unicornshake .5s infinite ease-in-out;
  */
-@keyframes shake {
+@keyframes #{$prefix}shake {
 
 	0% {
 		transform: rotate(5deg) translateY(-2px);
