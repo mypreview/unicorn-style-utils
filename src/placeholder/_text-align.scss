@@ -1,18 +1,18 @@
 // Requried
-// base/breakpoints
+// mixins/breakpoints
 
 @each $align in center, left, right {
 	.text-#{$align} {
 		text-align: $align;
 	}
 
-	@include until-tablet {
+	@include media(until-tablet) {
 		.tablet-text-#{$align} {
 			text-align: $align;
 		}
 	}
 
-	@include mobile {
+	@include media(mobile) {
 		.mobile-text-#{$align} {
 			text-align: $align;
 		}
