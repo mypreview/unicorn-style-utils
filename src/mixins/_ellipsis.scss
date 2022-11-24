@@ -1,0 +1,23 @@
+/**
+ * Truncates text and adds an ellipsis to represent overflow mixin
+ *
+ * Example .element {
+ *			  @include ellipsis;
+ *         }
+ * Result  .element {
+ *			  display: inline-block;
+ *			  max-width: 100%;
+ *			  overflow: hidden;
+ *			  text-overflow: ellipsis;
+ *			  white-space: nowrap;
+ *			  word-wrap: normal;
+ *         }
+ */
+@mixin ellipsis($width: 100%, $display: inline-block) {
+	display: $display;
+	max-width: $width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
