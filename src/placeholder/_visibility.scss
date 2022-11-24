@@ -1,0 +1,20 @@
+// Requried
+// mixins/breakpoints
+// mixin/hidden
+
+@each $device in widescreen, desktop, tablet, mobile {
+
+	@each $preposition in on, from, until {
+		.hide-#{$preposition}-#{$device} {
+			@if $preposition == on {
+				@include media(#{$device}) {
+					@include hidden();
+				}
+			} @else {
+				@include media(#{$preposition}-#{$device}) {
+					@include hidden();
+				}
+			}
+		}
+	}
+}
