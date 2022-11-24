@@ -1,22 +1,44 @@
 // Requried
-// base/breakpoints
+// mixins/breakpoints
 
 .columns {
 	display: grid;
 	gap: var(--columns-gap, 30px);
 
-	@include from-tablet {
+	@include media(from-tablet) {
 		@for $i from 2 through 5 {
 			&--#{$i} {
 				grid-template-columns: repeat(#{$i}, 1fr);
 			}
 		}
+
+		@for $i from 2 through 3 {
+
+			&--1-#{$i} {
+				grid-template-columns: 1fr #{$i}fr;
+			}
+
+			&--#{$i}-1 {
+				grid-template-columns: 1fr #{$i}fr;
+			}
+		}
 	}
 
-	@include tablet {
+	@include media(tablet) {
 		@for $i from 1 through 3 {
 			&--tablet-#{$i} {
 				grid-template-columns: repeat(#{$i}, 1fr);
+			}
+		}
+
+		@for $i from 2 through 3 {
+
+			&--tablet-1-#{$i} {
+				grid-template-columns: 1fr #{$i}fr;
+			}
+
+			&--tablet-#{$i}-1 {
+				grid-template-columns: 1fr #{$i}fr;
 			}
 		}
 	}

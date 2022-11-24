@@ -1,0 +1,65 @@
+$break-wide: 1280px;
+$break-large: 960px;
+$break-small: 600px;
+
+/**
+ * breakpoints mixin
+ *
+ * Example @include media(mobile) {
+ * 	          .features { display: none }
+ *         }
+ * Result  @media (max-width: 599px) {
+ * 	          .features { display: none }
+ *         }
+ */
+@mixin media($prop) {
+	@if $prop == mobile {
+
+		@media (max-width: #{$break-small - 1}) {
+			@content;
+		}
+
+	} @else if $prop == from-tablet {
+
+		@media (min-width: #{$break-small}) {
+			@content;
+		}
+
+	} @else if $prop == tablet {
+
+		@media (min-width: #{$break-small}) and (max-width: #{$break-large - 1}) {
+			@content;
+		}
+
+	} @else if $prop == until-tablet {
+
+		@media (max-width: #{$break-large - 1}) {
+			@content;
+		}
+
+	} @else if $prop == from-desktop {
+
+		@media (min-width: #{$break-large}) {
+			@content;
+		}
+
+	} @else if $prop == desktop {
+
+		@media (min-width: #{$break-large}) and (max-width: #{$break-wide - 1}) {
+			@content;
+		}
+
+	} @else if $prop == until-desktop {
+
+		@media (max-width: #{$break-wide - 1}) {
+			@content;
+		}
+
+	} @else if $prop == widescreen {
+
+		@media (min-width: #{$break-wide}) {
+			@content;
+		}
+
+	}
+}
