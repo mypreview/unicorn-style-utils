@@ -1,0 +1,19 @@
+/**
+ * Add an ellipsis to multiline text
+ *
+ * Example .element {
+ *			  @include ellipsis(3);
+ *         }
+ * Result  .element {
+ *			  overflow: hidden;
+ *			  display: -webkit-box;
+ *			  -webkit-line-clamp: 3;
+ *			  -webkit-box-orient: vertical;
+ *         }
+ */
+@mixin ellipsis($line: 1) {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+}
