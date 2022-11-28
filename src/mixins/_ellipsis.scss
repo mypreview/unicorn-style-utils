@@ -1,23 +1,19 @@
 /**
- * Truncates text and adds an ellipsis to represent overflow mixin
+ * Add an ellipsis to multiline text
  *
  * Example .element {
- *			  @include ellipsis;
+ *			  @include ellipsis(3);
  *         }
  * Result  .element {
- *			  display: inline-block;
- *			  max-width: 100%;
  *			  overflow: hidden;
- *			  text-overflow: ellipsis;
- *			  white-space: nowrap;
- *			  word-wrap: normal;
+ *			  display: -webkit-box;
+ *			  -webkit-line-clamp: 3;
+ *			  -webkit-box-orient: vertical;
  *         }
  */
-@mixin ellipsis($width: 100%, $display: inline-block) {
-	display: $display;
-	max-width: $width;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	word-wrap: normal;
+@mixin ellipsis($line: 1) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
 }
