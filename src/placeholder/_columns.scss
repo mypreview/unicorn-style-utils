@@ -5,7 +5,7 @@
 	display: grid;
 	gap: var(--columns-gap, 30px);
 
-	@include media(from-tablet) {
+	@include media(from-desktop) {
 		@for $i from 2 through 5 {
 			&--#{$i} {
 				grid-template-columns: repeat(#{$i}, 1fr);
@@ -19,7 +19,7 @@
 			}
 
 			&--#{$i}-1 {
-				grid-template-columns: 1fr #{$i}fr;
+				grid-template-columns: #{$i}fr 1fr;
 			}
 		}
 	}
@@ -38,7 +38,7 @@
 			}
 
 			&--tablet-#{$i}-1 {
-				grid-template-columns: 1fr #{$i}fr;
+				grid-template-columns: #{$i}fr 1fr;
 			}
 		}
 	}
