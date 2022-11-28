@@ -12,8 +12,8 @@
  *         }
  */
 @mixin ellipsis($line: 1) {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: $line;
-    -webkit-box-orient: vertical;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
 }
