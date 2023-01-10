@@ -1,6 +1,6 @@
 {
 	"name": "@mypreview/unicorn-style-utils",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"description": "A collection of SCSS utilities and variables.",
 	"keywords": [
 		"css",

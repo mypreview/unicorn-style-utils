@@ -8,7 +8,10 @@ html {
 	-webkit-text-size-adjust: 100%;
 	overflow-x: hidden;
 	word-break: break-word;
-	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
 }
 
 /*
@@ -145,12 +148,6 @@ progress {
 
 select {
 	text-transform: none;
-}
-
-// Remove the margin in Firefox and Safari.
-
-textarea {
-	margin: 0;
 }
 
 // 1. Correct the odd appearance in Chrome, Edge, and Safari.
